@@ -1,0 +1,7 @@
+<h1>Welcome <%= @username %></h1>
+
+<%= form_with(url: "/games", method: "post") do %>
+  <%= label_tag(:name, "What's her name?") %>
+  <%= text_field_tag(:name) %>
+  <%= submit_tag("Say her name") %>
+<% end %>

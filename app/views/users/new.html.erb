@@ -1,0 +1,8 @@
+<h1>Can You Say My Name?</h1>
+
+
+<%= form_with(url: "/users", method: "post") do %>
+  <%= label_tag(:username, "Username:") %>
+  <%= text_field_tag(:username) %>
+  <%= submit_tag("Create User") %>
+<% end %>
