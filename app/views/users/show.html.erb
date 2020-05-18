@@ -8,3 +8,7 @@
   <%= text_field_tag :name %><br><br>
   <%= submit_tag "Say her name" %><br><br>
 <% end %>
+
+<% flash.each do |classname, msg| %>
+  <p class="<%= classname %>"><%= msg %></p>
+<% end %>

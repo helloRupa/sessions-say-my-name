@@ -13,6 +13,7 @@ class UsersController < ApplicationController
 
       redirect_to '/users/1'
     else
+      flash.now[:error] = 'Username must be at least 3 characters'
       render :new
     end
   end
