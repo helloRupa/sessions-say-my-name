@@ -2,8 +2,11 @@ class GamesController < ApplicationController
   def create
     answer = params[:name]
 
-    puts answer.downcase == 'beyonce' ? 'Good job! You said her name' : 
-                                        'How do you not know?!'
+    if answer.downcase == 'beyonce'
+      puts 'Good job! You said her name'
+    else
+      puts 'How do you not know?!'
+    end
 
     redirect_to '/users/1'
   end
