@@ -11,8 +11,8 @@ Add statefulness to your Rails apps using cookies via session and flash (Googlin
 - [ ] Explain when to use session vs flash
 
 ### Explain the stateless nature of HTTP
-* Problem: Our app has no backend and can't remember the user's name or score
 * HTTP request-response cycle basically has amnesia
+* Problem: Our app has no database and can't remember the user's name or score
 
 ### TASK: Take a minute to write down what a session and a cookie are:
 * Open up our Slack channel
