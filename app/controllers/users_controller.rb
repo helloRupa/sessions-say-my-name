@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :username, only: [:show]
+
   def new
     @user = User.new
   end
@@ -7,6 +9,8 @@ class UsersController < ApplicationController
     @user = User.new(params[:username])
     
     if @user.valid_name?
+      session[:username] = @user.username
+
       redirect_to '/users/1'
     else
       render :new
@@ -14,5 +18,11 @@ class UsersController < ApplicationController
   end
 
   def show
+  end
+
+  private
+
+  def username
+    @username = session[:username]
   end
 end
