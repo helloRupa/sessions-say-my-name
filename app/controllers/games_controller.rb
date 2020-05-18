@@ -3,6 +3,7 @@ class GamesController < ApplicationController
     answer = params[:name]
 
     if answer.downcase == 'beyonce'
+      session[:score] += 1
       puts 'Good job! You said her name'
     else
       puts 'How do you not know?!'

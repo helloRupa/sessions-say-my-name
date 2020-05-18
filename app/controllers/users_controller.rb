@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :username, only: [:show]
+  before_action :username, :score, only: [:show]
 
   def new
     @user = User.new
@@ -24,5 +24,10 @@ class UsersController < ApplicationController
 
   def username
     @username = session[:username]
+  end
+
+  def score
+    session[:score] = session[:score].nil? ? 0 : session[:score]
+    @score = session[:score]
   end
 end
