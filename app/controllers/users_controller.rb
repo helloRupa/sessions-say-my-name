@@ -1,9 +1,16 @@
 class UsersController < ApplicationController
   def new
+    @user = User.new
   end
 
   def create
-    redirect_to '/users/1'
+    @user = User.new(params[:username])
+    
+    if @user.valid_name?
+      redirect_to '/users/1'
+    else
+      render :new
+    end
   end
 
   def show
