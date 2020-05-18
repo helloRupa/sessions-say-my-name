@@ -1,11 +1,11 @@
 class User
-  attr_accessor :name
+  attr_accessor :username
 
-  def initialize(name = nil)
-    @name = name
+  def initialize(username = nil)
+    @username = username
   end
 
   def valid_name?
-    @name.length > 3
+    @username.length > 3
   end
 end
