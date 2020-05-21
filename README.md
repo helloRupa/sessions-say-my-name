@@ -38,7 +38,7 @@ Add statefulness to your Rails apps using cookies via session and flash (Googlin
 * Our view should access that value using an instance variable
 * We can set it using a before_action
 
-### TASK: Take 3 minutes to implement the score. Then we'll do it together with your guidance.
+### TASK: Let's implement the score together.
 
 ### Implementing Flash
 * Let's add an error message when the username is incorrect via an instance variable
