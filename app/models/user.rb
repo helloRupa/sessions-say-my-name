@@ -6,6 +6,6 @@ class User
   end
 
   def valid_name?
-    @username.length > 3
+    @username.length >= 3
   end
 end
